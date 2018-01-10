@@ -1,0 +1,7 @@
+//org.eclipse.ui.commands/state/org.eclipse.papyrus.infra.nattable.column.index.style/org.eclipse.ui.commands.radioState=Alphabetic
+//org.eclipse.ui.commands/state/org.eclipse.papyrus.infra.nattable.row.index.style/org.eclipse.ui.commands.radioState=Alphabetic
+//org.eclipse.ui.commands/state/org.eclipse.papyrus.infra.nattable.table.hierarchic.style/org.eclipse.ui.commands.radioState=HIERARCHIC_MULTI_TREE_COLUMN
+//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
+PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;
+eclipse.preferences.version=1
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands>\r\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="ALT+/"/>\r\n<keyBinding commandId\="org.eclipse.ui.edit.text.hippieCompletion" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="ALT+/"/>\r\n</org.eclipse.ui.commands>
