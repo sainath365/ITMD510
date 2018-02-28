@@ -2,17 +2,32 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
+/**
+ * This program reads in data from bank-details.csv file and processes the data
+ * then stores it in an array of objects
+ * @author Chris
+ *
+ */
 public class BankRecords extends Client {
 
+	//variable for file name 
 	static final String fileName = "bank-Detail.csv";
+	//variable for the character the csv is split by
 	static final String csvSplit = ",";
+	//Variable to count the number of lines 
 	long numOfLines = 0;
+	//instantiate the array of objects
 	static BankRecords objects[];
+	//array list of a list of string 
 	static ArrayList<List<String>> array = new ArrayList<>();
+	//instantiate all the variables 
 	String id;
 	int age;
 	String sex;
@@ -207,6 +222,14 @@ public class BankRecords extends Client {
 	public void setNumOfLines(long numOfLines) {
 		this.numOfLines = numOfLines;
 	}
+	
+	//prints my name at the end of the console out
+	public void exitPrintout(){
+		DateFormat tf = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+		Date date = new Date();
+		System.out.println("Current Date " + tf.format(date));
+		System.out.println("Created By Chris Doherty \n");
+	}
 
 	/**
 	 * This method will read in all the record data from the csv file and put
@@ -218,12 +241,13 @@ public class BankRecords extends Client {
 		try {            
             //Wraps FileReader in BufferedReader so we can deal with one line at a time. 
             BufferedReader fileInput = new BufferedReader(new FileReader(fileName));
-
+            //reads each line to get the number of lines present in the file 
             while((line = fileInput.readLine()) != null) {
+            	//adds line into array list
             	array.add(Arrays.asList(line.split(csvSplit)));
-                //System.out.println(line);
                 numLines++;
-            }             
+            }   
+            //sets the number of lines in the file 
             setNumOfLines(numLines);
           
             // Close file
@@ -239,6 +263,7 @@ public class BankRecords extends Client {
                 "Error reading file '" 
                 + fileName + "'");             
         }
+		//calls process data method
 		processData();
 	}
 	
@@ -248,12 +273,13 @@ public class BankRecords extends Client {
 	 * 
 	 */
 	public void processData() {
+		//casts number of lines to int and makes the array that length 
 		int lines = (int) getNumOfLines();
 		objects = new BankRecords[lines];
 		
 		int x = 0;
 		
-		//loop to iterate through the arraylist
+		//loop to iterate through the arraylist and add to objects array
 		for(List<String> row: array) {
 			objects[x] = new BankRecords();
 			objects[x].setId(row.get(0));
@@ -270,6 +296,7 @@ public class BankRecords extends Client {
 			objects[x].setPep(row.get(11));
 			x++;
 		}
+		//calls print data
 		printData();	
 	}
 	
@@ -279,7 +306,9 @@ public class BankRecords extends Client {
 	 *  ID, AGE, SEX, REGION, INCOME, and MORTGAGE
 	 */
 	public void printData() {
+		//makes the header for columns
 		System.out.println("ID\t\tAge\tSex\tRegion\t\tIncome\t\tMortgage");
+		//iterate through the object array and prints out the first 25
 		for(int i=0; i<25; i++) {
 			System.out.printf("%s\t\t" //ID
 					+ "%d\t" //Age
@@ -296,7 +325,9 @@ public class BankRecords extends Client {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BankRecords obj = new BankRecords();
-		obj.readData();	
+		//uses an object to call read data
+		obj.readData();
+		obj.exitPrintout();
 	}
 
 }
