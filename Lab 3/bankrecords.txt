@@ -1,0 +1,27 @@
+Avg income for Rural region $30027.61
+Avg income for Inner City region $27752.87
+Avg income for Suburban region $28656.36
+Avg income for Town region $26802.19
+
+Minimum income for Rural region 8639.24
+Minimum income for Inner City region 6294.21
+Minimum income for Surburban region 8143.75
+Minimum income for Town region 5014.21
+
+Max income for Rural region 57398.1
+Max income for Inner City region 266222.8
+Max income for Surburban region 63130.1
+Max income for Town region 59803.9
+
+Rural region Females with Mortgage and Savings Account 9
+Inner City region Females with Mortgage and Savings Account 31
+Suburban region Females with Mortgage and Savings Account 4
+Town region Females with Mortgage and Savings Account 27
+
+Rural region Males with 1 Child and a Car 9
+Inner City region Males with 1 Child and a Car 15
+Suburban region Males with 1 Child and a Car 3
+Town region Males with 1 Child and a Car 7
+
+Current Date 04/03/18 14:39:52
+Created By Chris Doherty 
